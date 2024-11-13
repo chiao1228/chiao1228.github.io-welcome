@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品展示頁</title>
+    <style>
+        /* 整體樣式 */
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #f9f9f9, #e0f7fa);
+            color: #444;
+        }
+        header, section, footer {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+            font-size: 1.8em;
+            margin-top: 0;
+            text-align: center;
+        }
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px 20px;
+            margin: 10px auto;
+            font-size: 1em;
+            font-weight: bold;
+            color: #ffffff;
+            background: linear-gradient(90deg, #26c6da, #26a69a);
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: linear-gradient(90deg, #26a69a, #26c6da);
+        }
+        .category {
+            margin-top: 10px;
+            padding-top: 15px;
+            border-top: 2px solid #ddd;
+        }
+        .work {
+            background: #f5f5f5;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 15px 0;
+            box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.08);
+        }
+        .work strong {
+            display: block;
+            color: #333;
+            font-size: 1.1em;
+            margin-bottom: 5px;
+        }
+        .work p {
+            margin: 5px 0;
+            color: #666;
+        }
+        footer {
+            text-align: center;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header id="greetingSection">
+        <h2>作品展示頁</h2>
+        <button onclick="greet()">開始參觀</button>
+    </header>
+
+    <section id="works">
+        <h2>作品展示</h2>
+        <div class="category">
+            <h3>插畫作品</h3>
+            <div class="work">
+                <strong>作品名稱：星空下的夢想</strong>
+                <p>完工日期：2024年10月1日</p>
+                <p>描述：一幅表現夢境與星空的插畫，充滿神秘感。</p>
+            </div>
+        </div>
+
+        <div class="category">
+            <h3>程式開發</h3>
+            <div class="work">
+                <strong>作品名稱：簡易計算器</strong>
+                <p>完工日期：2024年9月15日</p>
+                <p>描述：一個簡單的網頁計算器，方便快速計算。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>聯繫方式：example@example.com</p>
+    </footer>
+
+    <script>
+        function greet() {
+            const nickname = prompt("請輸入您的暱稱：");
+            if (nickname) {
+                alert(`您好，${nickname}！歡迎參觀我的作品！`);
+                document.getElementById('works').style.display = 'block'; // 顯示作品區
+                document.getElementById('greetingSection').style.display = 'none'; // 隱藏打招呼欄
+            } else {
+                alert('請輸入有效的暱稱，才能觀看作品。');
+            }
+        }
+    </script>
+</body>
+</html>
